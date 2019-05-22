@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Space Search</title>
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+    <style>
+
+body {
+  background-image: url("https://img.live/images/2019/03/29/test1.jpg");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+}
+
+div.figp{
+  position: absolute;
+  top: 2%;
+  left: 2.5%;
+
+}
+
+div.figb{
+  position: absolute;
+  top: 3.5%;
+  left: 12%;
+
+}
+
+div.figs{
+  position: absolute;
+  top: 15%;
+  left: 2.5%;
+
+}
+
+div.figi{
+  position: absolute;
+  top: 4.5%;
+  left: 47.5%;
+}
+
+p.one {
+  box-sizing: border-box;
+  padding: 0 40px 0 10px;
+  width: 500px;
+  height: 40px;
+  border: 4px solid #ffffff;
+  border-radius: 30px;
+  background: none;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 1000;
+  outline: 0;
+}
+
+div.ex2 {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  width: 900px;
+  padding: 25px ;
+  box-sizing: border-box;
+  background-color: gray;
+  color: white;
+  border: 4px solid #ffffff;
+  border-radius: 30px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+a:link, a:visited {
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+a.center {
+  text-align: left;
+  color: red;
+}
+
+div.figh {
+  position: absolute;
+  top: 4.5%;
+  left: 47.5%;
+}
+    </style>
+
+</head>
+
+<body>
+
+
+<div class = "w3-display-topmiddle">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="w3-large  w3-animate-top w3-cell w3-text-white "><b> Showing results for : &nbsp; </b></p>
+{% for x in words: %}
+    <p class="w3-medium  w3-animate-top w3-cell w3-text-white "><b>{{x}} &nbsp; </b></p>
+{% endfor %}
+</div>
+
+<div class="figp">
+<img src="https://www.img.in.th/images/383e4f6cc1adb5279ede5ba439884fbf.png" alt="383e4f6cc1adb5279ede5ba439884fbf.png" style="width:50%" />
+</div>
+
+<div class="figb">
+<p class = "one">  {{word}}  </p>
+</div>
+
+<div class="figs">
+  <p class="w3-medium  w3-animate-top w3-cell w3-text-white "><b>Space</b></p>
+      <p class="w3-medium  w3-animate-top w3-cell w3-text-white"><b>Search</b></p>
+</div>
+
+<div class="figi ">
+<p><button class="fa fa-search w3-text-white w3-btn w3-round-large" type="submit" onclick="goBack()" ></button></p>
+</div>
+
+<div class="ex2">
+    {% for x in weblink: %}
+    <a href="{{x}}" class="center w3-medium  w3-animate-top w3-cell w3-text-white">{{x}}</a>
+    <br>
+    {% endfor %}
+</div>
+
+    <script>
+        function goBack() {
+        window.history.go(-1);
+    }
+    </script>
+
+</body>
+
+</html>
